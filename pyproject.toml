@@ -1,0 +1,7 @@
+[project]
+name = "data-warehouse-final"
+version = "0.1.0"
+description = "Data Warehouse Final Project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
