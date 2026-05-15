@@ -20,6 +20,26 @@ SQLITE_PATH = SQLITE_DIR / "source_systems.db"
 
 SEED = 20260515
 HOME_COUNTRY = "Indonesia"
+TABLE_FORMATS = {
+    "crm_regions": "json",
+    "crm_customers": "json",
+    "so_orders": "json",
+    "so_order_items": "json",
+    "lgs_shipments": "json",
+    "segment_reference": "json",
+    "customer_region_snapshot": "json",
+    "wms_warehouses": "csv",
+    "wms_inventory_transactions": "csv",
+    "hr_employees": "csv",
+    "sales_employee_segment_lookup": "csv",
+    "erp_products": "sqlite",
+    "erp_plants": "sqlite",
+    "mrp_production_orders": "sqlite",
+    "mrp_production_results": "sqlite",
+    "product_cost_lookup": "sqlite",
+    "production_segment_lookup": "sqlite",
+    "inventory_segment_lookup": "sqlite",
+}
 
 
 def quantize(value: Decimal, places: str = "0.01") -> Decimal:
@@ -180,6 +200,18 @@ def write_sqlite(table_map: dict[str, list[dict[str, object]]]) -> None:
             )
 
         connection.commit()
+
+
+def write_table_by_format(table_name: str, rows: list[dict[str, object]]) -> None:
+    output_format = TABLE_FORMATS[table_name]
+    if output_format == "csv":
+        write_csv(table_name, rows)
+    elif output_format == "json":
+        write_json(table_name, rows)
+    elif output_format == "sqlite":
+        return
+    else:
+        raise ValueError(f"Unsupported output format: {output_format}")
 
 
 def build_reference_data() -> dict[str, list[object]]:
@@ -604,24 +636,45 @@ def main() -> None:
         )
     )
 
-    for table_name, rows in table_map.items():
-        write_csv(table_name, rows)
-        write_json(table_name, rows)
+    sqlite_tables = {
+        table_name: rows
+        for table_name, rows in table_map.items()
+        if TABLE_FORMATS[table_name] == "sqlite"
+    }
 
-    write_sqlite(table_map)
+    for table_name, rows in table_map.items():
+        write_table_by_format(table_name, rows)
+
+    write_sqlite(sqlite_tables)
 
     manifest = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "seed": SEED,
         "home_country": HOME_COUNTRY,
-        "sqlite_database": str(SQLITE_PATH.relative_to(ROOT_DIR)),
-        "tables": {table_name: len(rows) for table_name, rows in table_map.items()},
+        "sqlite_database": str(SQLITE_PATH.relative_to(ROOT_DIR)) if sqlite_tables else None,
+        "tables": {
+            table_name: {
+                "rows": len(rows),
+                "format": TABLE_FORMATS[table_name],
+                "path": (
+                    str((CSV_DIR / f"{table_name}.csv").relative_to(ROOT_DIR))
+                    if TABLE_FORMATS[table_name] == "csv"
+                    else str((JSON_DIR / f"{table_name}.json").relative_to(ROOT_DIR))
+                    if TABLE_FORMATS[table_name] == "json"
+                    else str(SQLITE_PATH.relative_to(ROOT_DIR))
+                ),
+            }
+            for table_name, rows in table_map.items()
+        },
     }
     write_json("_manifest", [manifest])
 
     print(f"Generated {len(table_map)} datasets in {ROOT_DIR}")
-    for table_name, count in manifest["tables"].items():
-        print(f"- {table_name}: {count} rows")
+    for table_name, details in manifest["tables"].items():
+        print(
+            f"- {table_name}: {details['rows']} rows "
+            f"({details['format']} -> {details['path']})"
+        )
 
 
 if __name__ == "__main__":

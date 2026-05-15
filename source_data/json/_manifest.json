@@ -1,28 +1,100 @@
 [
   {
-    "generated_at": "2026-05-15T19:25:55",
+    "generated_at": "2026-05-15T19:38:24",
     "seed": 20260515,
     "home_country": "Indonesia",
     "sqlite_database": "sqlite\\source_systems.db",
     "tables": {
-      "crm_regions": 6,
-      "crm_customers": 12,
-      "erp_products": 10,
-      "erp_plants": 4,
-      "hr_employees": 8,
-      "wms_warehouses": 5,
-      "so_orders": 60,
-      "so_order_items": 151,
-      "mrp_production_orders": 40,
-      "mrp_production_results": 40,
-      "wms_inventory_transactions": 2000,
-      "lgs_shipments": 45,
-      "segment_reference": 4,
-      "product_cost_lookup": 10,
-      "production_segment_lookup": 40,
-      "inventory_segment_lookup": 2000,
-      "sales_employee_segment_lookup": 8,
-      "customer_region_snapshot": 12
+      "crm_regions": {
+        "rows": 6,
+        "format": "json",
+        "path": "json\\crm_regions.json"
+      },
+      "crm_customers": {
+        "rows": 12,
+        "format": "json",
+        "path": "json\\crm_customers.json"
+      },
+      "erp_products": {
+        "rows": 10,
+        "format": "sqlite",
+        "path": "sqlite\\source_systems.db"
+      },
+      "erp_plants": {
+        "rows": 4,
+        "format": "sqlite",
+        "path": "sqlite\\source_systems.db"
+      },
+      "hr_employees": {
+        "rows": 8,
+        "format": "csv",
+        "path": "csv\\hr_employees.csv"
+      },
+      "wms_warehouses": {
+        "rows": 5,
+        "format": "csv",
+        "path": "csv\\wms_warehouses.csv"
+      },
+      "so_orders": {
+        "rows": 60,
+        "format": "json",
+        "path": "json\\so_orders.json"
+      },
+      "so_order_items": {
+        "rows": 151,
+        "format": "json",
+        "path": "json\\so_order_items.json"
+      },
+      "mrp_production_orders": {
+        "rows": 40,
+        "format": "sqlite",
+        "path": "sqlite\\source_systems.db"
+      },
+      "mrp_production_results": {
+        "rows": 40,
+        "format": "sqlite",
+        "path": "sqlite\\source_systems.db"
+      },
+      "wms_inventory_transactions": {
+        "rows": 2000,
+        "format": "csv",
+        "path": "csv\\wms_inventory_transactions.csv"
+      },
+      "lgs_shipments": {
+        "rows": 45,
+        "format": "json",
+        "path": "json\\lgs_shipments.json"
+      },
+      "segment_reference": {
+        "rows": 4,
+        "format": "json",
+        "path": "json\\segment_reference.json"
+      },
+      "product_cost_lookup": {
+        "rows": 10,
+        "format": "sqlite",
+        "path": "sqlite\\source_systems.db"
+      },
+      "production_segment_lookup": {
+        "rows": 40,
+        "format": "sqlite",
+        "path": "sqlite\\source_systems.db"
+      },
+      "inventory_segment_lookup": {
+        "rows": 2000,
+        "format": "sqlite",
+        "path": "sqlite\\source_systems.db"
+      },
+      "sales_employee_segment_lookup": {
+        "rows": 8,
+        "format": "csv",
+        "path": "csv\\sales_employee_segment_lookup.csv"
+      },
+      "customer_region_snapshot": {
+        "rows": 12,
+        "format": "json",
+        "path": "json\\customer_region_snapshot.json"
+      }
     }
   }
 ]
