@@ -1,0 +1,9 @@
+employee_id,employee_code,full_name,department,segment,region_id
+1,EMP-001,Ari Pratama,Sales,Retail,1
+2,EMP-002,Dina Kusuma,Sales,Healthcare,1
+3,EMP-003,Rizky Mahesa,Sales,Consumer,2
+4,EMP-004,Nadia Putri,Operations,Manufacturing,2
+5,EMP-005,Kevin Tan,Export,Retail,4
+6,EMP-006,Siti Rahma,Operations,Healthcare,3
+7,EMP-007,Anan Chaiwat,Logistics,Healthcare,6
+8,EMP-008,Maya Lestari,Sales,Manufacturing,3

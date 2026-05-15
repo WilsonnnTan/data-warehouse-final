@@ -1,0 +1,28 @@
+[
+  {
+    "generated_at": "2026-05-15T19:25:55",
+    "seed": 20260515,
+    "home_country": "Indonesia",
+    "sqlite_database": "sqlite\\source_systems.db",
+    "tables": {
+      "crm_regions": 6,
+      "crm_customers": 12,
+      "erp_products": 10,
+      "erp_plants": 4,
+      "hr_employees": 8,
+      "wms_warehouses": 5,
+      "so_orders": 60,
+      "so_order_items": 151,
+      "mrp_production_orders": 40,
+      "mrp_production_results": 40,
+      "wms_inventory_transactions": 2000,
+      "lgs_shipments": 45,
+      "segment_reference": 4,
+      "product_cost_lookup": 10,
+      "production_segment_lookup": 40,
+      "inventory_segment_lookup": 2000,
+      "sales_employee_segment_lookup": 8,
+      "customer_region_snapshot": 12
+    }
+  }
+]

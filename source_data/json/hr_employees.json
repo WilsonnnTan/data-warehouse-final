@@ -1,0 +1,66 @@
+[
+  {
+    "employee_id": 1,
+    "employee_code": "EMP-001",
+    "full_name": "Ari Pratama",
+    "department": "Sales",
+    "segment": "Retail",
+    "region_id": 1
+  },
+  {
+    "employee_id": 2,
+    "employee_code": "EMP-002",
+    "full_name": "Dina Kusuma",
+    "department": "Sales",
+    "segment": "Healthcare",
+    "region_id": 1
+  },
+  {
+    "employee_id": 3,
+    "employee_code": "EMP-003",
+    "full_name": "Rizky Mahesa",
+    "department": "Sales",
+    "segment": "Consumer",
+    "region_id": 2
+  },
+  {
+    "employee_id": 4,
+    "employee_code": "EMP-004",
+    "full_name": "Nadia Putri",
+    "department": "Operations",
+    "segment": "Manufacturing",
+    "region_id": 2
+  },
+  {
+    "employee_id": 5,
+    "employee_code": "EMP-005",
+    "full_name": "Kevin Tan",
+    "department": "Export",
+    "segment": "Retail",
+    "region_id": 4
+  },
+  {
+    "employee_id": 6,
+    "employee_code": "EMP-006",
+    "full_name": "Siti Rahma",
+    "department": "Operations",
+    "segment": "Healthcare",
+    "region_id": 3
+  },
+  {
+    "employee_id": 7,
+    "employee_code": "EMP-007",
+    "full_name": "Anan Chaiwat",
+    "department": "Logistics",
+    "segment": "Healthcare",
+    "region_id": 6
+  },
+  {
+    "employee_id": 8,
+    "employee_code": "EMP-008",
+    "full_name": "Maya Lestari",
+    "department": "Sales",
+    "segment": "Manufacturing",
+    "region_id": 3
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "segment_id": 1,
+    "segment_code": "CON",
+    "segment_name": "Consumer"
+  },
+  {
+    "segment_id": 2,
+    "segment_code": "RET",
+    "segment_name": "Retail"
+  },
+  {
+    "segment_id": 3,
+    "segment_code": "HRC",
+    "segment_name": "Healthcare"
+  },
+  {
+    "segment_id": 4,
+    "segment_code": "MFG",
+    "segment_name": "Manufacturing"
+  }
+]

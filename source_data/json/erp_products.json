@@ -1,0 +1,102 @@
+[
+  {
+    "product_id": 1,
+    "product_code": "PRD-001",
+    "product_name": "Vitamin C Syrup",
+    "category": "Pharma",
+    "uom": "BOTTLE",
+    "principal": "BioNusa",
+    "target_industry": "Healthcare",
+    "standard_cost": "18.50"
+  },
+  {
+    "product_id": 2,
+    "product_code": "PRD-002",
+    "product_name": "Pain Relief Tablet",
+    "category": "Pharma",
+    "uom": "BOX",
+    "principal": "BioNusa",
+    "target_industry": "Healthcare",
+    "standard_cost": "12.40"
+  },
+  {
+    "product_id": 3,
+    "product_code": "PRD-003",
+    "product_name": "Mineral Water 600ml",
+    "category": "Beverage",
+    "uom": "CASE",
+    "principal": "FreshWave",
+    "target_industry": "Food & Beverage",
+    "standard_cost": "22.10"
+  },
+  {
+    "product_id": 4,
+    "product_code": "PRD-004",
+    "product_name": "Sparkling Drink",
+    "category": "Beverage",
+    "uom": "CASE",
+    "principal": "FreshWave",
+    "target_industry": "Retail",
+    "standard_cost": "26.80"
+  },
+  {
+    "product_id": 5,
+    "product_code": "PRD-005",
+    "product_name": "Household Cleaner",
+    "category": "Home Care",
+    "uom": "BOX",
+    "principal": "Cleanera",
+    "target_industry": "Retail",
+    "standard_cost": "15.30"
+  },
+  {
+    "product_id": 6,
+    "product_code": "PRD-006",
+    "product_name": "Dishwashing Liquid",
+    "category": "Home Care",
+    "uom": "BOTTLE",
+    "principal": "Cleanera",
+    "target_industry": "Retail",
+    "standard_cost": "10.70"
+  },
+  {
+    "product_id": 7,
+    "product_code": "PRD-007",
+    "product_name": "Industrial Solvent",
+    "category": "Chemical",
+    "uom": "DRUM",
+    "principal": "ChemPro",
+    "target_industry": "Manufacturing",
+    "standard_cost": "75.00"
+  },
+  {
+    "product_id": 8,
+    "product_code": "PRD-008",
+    "product_name": "Lubricant Oil",
+    "category": "Chemical",
+    "uom": "DRUM",
+    "principal": "ChemPro",
+    "target_industry": "Manufacturing",
+    "standard_cost": "68.40"
+  },
+  {
+    "product_id": 9,
+    "product_code": "PRD-009",
+    "product_name": "Snack Crackers",
+    "category": "Food",
+    "uom": "CASE",
+    "principal": "Golden Bite",
+    "target_industry": "Consumer",
+    "standard_cost": "14.90"
+  },
+  {
+    "product_id": 10,
+    "product_code": "PRD-010",
+    "product_name": "Instant Noodles",
+    "category": "Food",
+    "uom": "CASE",
+    "principal": "Golden Bite",
+    "target_industry": "Consumer",
+    "standard_cost": "11.80"
+  }
+]

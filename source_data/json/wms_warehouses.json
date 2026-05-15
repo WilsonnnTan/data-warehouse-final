@@ -1,0 +1,37 @@
+[
+  {
+    "warehouse_id": 1,
+    "warehouse_code": "WH-JKT",
+    "warehouse_name": "Jakarta Central Warehouse",
+    "warehouse_type": "Distribution",
+    "region_id": 1
+  },
+  {
+    "warehouse_id": 2,
+    "warehouse_code": "WH-SBY",
+    "warehouse_name": "Surabaya Fulfillment Center",
+    "warehouse_type": "Distribution",
+    "region_id": 2
+  },
+  {
+    "warehouse_id": 3,
+    "warehouse_code": "WH-BDG",
+    "warehouse_name": "Bandung Finished Goods Hub",
+    "warehouse_type": "Storage",
+    "region_id": 3
+  },
+  {
+    "warehouse_id": 4,
+    "warehouse_code": "WH-SGP",
+    "warehouse_name": "Singapore Export Warehouse",
+    "warehouse_type": "Export",
+    "region_id": 4
+  },
+  {
+    "warehouse_id": 5,
+    "warehouse_code": "WH-BKK",
+    "warehouse_name": "Bangkok Transit Warehouse",
+    "warehouse_type": "Transit",
+    "region_id": 6
+  }
+]

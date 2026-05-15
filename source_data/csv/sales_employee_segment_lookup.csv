@@ -1,0 +1,9 @@
+employee_id,employee_code,segment_code,segment_name
+1,EMP-001,RET,Retail
+2,EMP-002,HRC,Healthcare
+3,EMP-003,CON,Consumer
+4,EMP-004,MFG,Manufacturing
+5,EMP-005,RET,Retail
+6,EMP-006,HRC,Healthcare
+7,EMP-007,HRC,Healthcare
+8,EMP-008,MFG,Manufacturing

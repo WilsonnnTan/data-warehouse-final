@@ -1,0 +1,6 @@
+warehouse_id,warehouse_code,warehouse_name,warehouse_type,region_id
+1,WH-JKT,Jakarta Central Warehouse,Distribution,1
+2,WH-SBY,Surabaya Fulfillment Center,Distribution,2
+3,WH-BDG,Bandung Finished Goods Hub,Storage,3
+4,WH-SGP,Singapore Export Warehouse,Export,4
+5,WH-BKK,Bangkok Transit Warehouse,Transit,6

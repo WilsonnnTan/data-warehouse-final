@@ -1,0 +1,50 @@
+[
+  {
+    "employee_id": 1,
+    "employee_code": "EMP-001",
+    "segment_code": "RET",
+    "segment_name": "Retail"
+  },
+  {
+    "employee_id": 2,
+    "employee_code": "EMP-002",
+    "segment_code": "HRC",
+    "segment_name": "Healthcare"
+  },
+  {
+    "employee_id": 3,
+    "employee_code": "EMP-003",
+    "segment_code": "CON",
+    "segment_name": "Consumer"
+  },
+  {
+    "employee_id": 4,
+    "employee_code": "EMP-004",
+    "segment_code": "MFG",
+    "segment_name": "Manufacturing"
+  },
+  {
+    "employee_id": 5,
+    "employee_code": "EMP-005",
+    "segment_code": "RET",
+    "segment_name": "Retail"
+  },
+  {
+    "employee_id": 6,
+    "employee_code": "EMP-006",
+    "segment_code": "HRC",
+    "segment_name": "Healthcare"
+  },
+  {
+    "employee_id": 7,
+    "employee_code": "EMP-007",
+    "segment_code": "HRC",
+    "segment_name": "Healthcare"
+  },
+  {
+    "employee_id": 8,
+    "employee_code": "EMP-008",
+    "segment_code": "MFG",
+    "segment_name": "Manufacturing"
+  }
+]

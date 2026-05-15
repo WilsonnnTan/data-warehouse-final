@@ -1,0 +1,98 @@
+[
+  {
+    "customer_id": 1,
+    "customer_code": "CUST-001",
+    "customer_name": "Nusantara Mart",
+    "customer_type": "Distributor",
+    "industry": "Retail",
+    "region_id": 1
+  },
+  {
+    "customer_id": 2,
+    "customer_code": "CUST-002",
+    "customer_name": "Sehat Farma",
+    "customer_type": "Enterprise",
+    "industry": "Healthcare",
+    "region_id": 1
+  },
+  {
+    "customer_id": 3,
+    "customer_code": "CUST-003",
+    "customer_name": "Java Wholesale",
+    "customer_type": "Distributor",
+    "industry": "Consumer Goods",
+    "region_id": 2
+  },
+  {
+    "customer_id": 4,
+    "customer_code": "CUST-004",
+    "customer_name": "Bandung Medika",
+    "customer_type": "Enterprise",
+    "industry": "Healthcare",
+    "region_id": 3
+  },
+  {
+    "customer_id": 5,
+    "customer_code": "CUST-005",
+    "customer_name": "Lion City Trade",
+    "customer_type": "Export",
+    "industry": "Retail",
+    "region_id": 4
+  },
+  {
+    "customer_id": 6,
+    "customer_code": "CUST-006",
+    "customer_name": "Malaya Essentials",
+    "customer_type": "Export",
+    "industry": "Consumer Goods",
+    "region_id": 5
+  },
+  {
+    "customer_id": 7,
+    "customer_code": "CUST-007",
+    "customer_name": "Siam Care Supply",
+    "customer_type": "Enterprise",
+    "industry": "Healthcare",
+    "region_id": 6
+  },
+  {
+    "customer_id": 8,
+    "customer_code": "CUST-008",
+    "customer_name": "Archipelago Foods",
+    "customer_type": "Enterprise",
+    "industry": "Food & Beverage",
+    "region_id": 2
+  },
+  {
+    "customer_id": 9,
+    "customer_code": "CUST-009",
+    "customer_name": "Pacific Hardware",
+    "customer_type": "Distributor",
+    "industry": "Manufacturing",
+    "region_id": 4
+  },
+  {
+    "customer_id": 10,
+    "customer_code": "CUST-010",
+    "customer_name": "Indo Retail Group",
+    "customer_type": "Key Account",
+    "industry": "Retail",
+    "region_id": 1
+  },
+  {
+    "customer_id": 11,
+    "customer_code": "CUST-011",
+    "customer_name": "Garuda Home Goods",
+    "customer_type": "Distributor",
+    "industry": "Consumer Goods",
+    "region_id": 3
+  },
+  {
+    "customer_id": 12,
+    "customer_code": "CUST-012",
+    "customer_name": "Mekar Industri",
+    "customer_type": "Enterprise",
+    "industry": "Manufacturing",
+    "region_id": 2
+  }
+]

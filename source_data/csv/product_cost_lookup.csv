@@ -1,0 +1,11 @@
+product_id,product_code,standard_cost,target_industry
+1,PRD-001,18.50,Healthcare
+2,PRD-002,12.40,Healthcare
+3,PRD-003,22.10,Food & Beverage
+4,PRD-004,26.80,Retail
+5,PRD-005,15.30,Retail
+6,PRD-006,10.70,Retail
+7,PRD-007,75.00,Manufacturing
+8,PRD-008,68.40,Manufacturing
+9,PRD-009,14.90,Consumer
+10,PRD-010,11.80,Consumer

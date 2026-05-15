@@ -1,0 +1,30 @@
+[
+  {
+    "plant_id": 1,
+    "plant_code": "PLT-JKT",
+    "plant_name": "Jakarta Main Plant",
+    "plant_type": "Manufacturing",
+    "region_id": 1
+  },
+  {
+    "plant_id": 2,
+    "plant_code": "PLT-SBY",
+    "plant_name": "Surabaya Processing Plant",
+    "plant_type": "Manufacturing",
+    "region_id": 2
+  },
+  {
+    "plant_id": 3,
+    "plant_code": "PLT-BDG",
+    "plant_name": "Bandung Packaging Plant",
+    "plant_type": "Packaging",
+    "region_id": 3
+  },
+  {
+    "plant_id": 4,
+    "plant_code": "PLT-SGP",
+    "plant_name": "Singapore Export Plant",
+    "plant_type": "Manufacturing",
+    "region_id": 4
+  }
+]

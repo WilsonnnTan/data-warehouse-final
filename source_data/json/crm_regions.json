@@ -1,0 +1,38 @@
+[
+  {
+    "region_id": 1,
+    "region_code": "JKT",
+    "region_name": "Jakarta Metro",
+    "country": "Indonesia"
+  },
+  {
+    "region_id": 2,
+    "region_code": "SBY",
+    "region_name": "Surabaya East",
+    "country": "Indonesia"
+  },
+  {
+    "region_id": 3,
+    "region_code": "BDG",
+    "region_name": "Bandung Highlands",
+    "country": "Indonesia"
+  },
+  {
+    "region_id": 4,
+    "region_code": "SGP",
+    "region_name": "Singapore Hub",
+    "country": "Singapore"
+  },
+  {
+    "region_id": 5,
+    "region_code": "KUL",
+    "region_name": "Kuala Lumpur Hub",
+    "country": "Malaysia"
+  },
+  {
+    "region_id": 6,
+    "region_code": "BKK",
+    "region_name": "Bangkok Corridor",
+    "country": "Thailand"
+  }
+]

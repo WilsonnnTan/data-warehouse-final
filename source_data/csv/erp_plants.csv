@@ -1,0 +1,5 @@
+plant_id,plant_code,plant_name,plant_type,region_id
+1,PLT-JKT,Jakarta Main Plant,Manufacturing,1
+2,PLT-SBY,Surabaya Processing Plant,Manufacturing,2
+3,PLT-BDG,Bandung Packaging Plant,Packaging,3
+4,PLT-SGP,Singapore Export Plant,Manufacturing,4
