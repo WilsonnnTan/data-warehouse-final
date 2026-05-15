@@ -52,12 +52,6 @@ After `uv` is installed, run these commands from the project folder:
 uv sync
 ```
 
-### 2. Run the project
-
-```bash
-uv run main.py
-```
-
 ## Run Database Migrations
 
 To create or update the database schema with Alembic:
