@@ -57,3 +57,35 @@ uv sync
 ```bash
 uv run main.py
 ```
+
+## Run Database Migrations
+
+To create or update the database schema with Alembic:
+
+### 1. Copy the environment file
+
+```bash
+cp .env.example .env
+```
+
+If you are using Windows PowerShell, you can use:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+### 2. Fill in your database URL
+
+Open `.env` and set your `DATABASE_URL`.
+
+Example:
+
+```env
+DATABASE_URL=postgresql+psycopg://username:password@localhost:5432/data_warehouse
+```
+
+### 3. Run the migration
+
+```bash
+alembic -c alembic/alembic.ini upgrade head
+```
