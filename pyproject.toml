@@ -4,4 +4,8 @@ version = "0.1.0"
 description = "Data Warehouse Final Project"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "alembic>=1.18.4",
+    "dotenv>=0.9.9",
+    "sqlalchemy>=2.0.49",
+]
