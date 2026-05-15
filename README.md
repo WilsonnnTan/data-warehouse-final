@@ -1,10 +1,14 @@
 # Data Warehouse Final Project
 
-## Identity
-
-- Name: Wilson Angelie Tan
-- Project: `data-warehouse-final`
-
+## Group Profile
+ 
+**Project:** `data-warehouse-final`
+ 
+| No | Name | Student ID |
+|---|---|---|
+| 1 | Wilson Angelie Tan | 140810230024 |
+| 2 | Muhammad Fadhli Ramadhan Aulia | 140810230056 |
+| 3 | Bim Yusuf Karang | 140810230084 |
 ## Project Description
 
 This project is a data warehouse pipeline project built for a Data Warehouse course. The main goal is to prepare a foundation for collecting, transforming, and organizing data into a structured warehouse that can support reporting, analytics, and better decision-making.
