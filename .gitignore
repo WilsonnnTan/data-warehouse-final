@@ -218,3 +218,27 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local database files (SQLite, DuckDB, etc.)
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.duckdb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Local system / Tool caches
+anaconda_projects/
+
