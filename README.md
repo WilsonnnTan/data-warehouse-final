@@ -48,42 +48,62 @@ pip install uv
 
 ## Run the Project
 
-After `uv` is installed, run these commands from the project folder:
+Follow the steps below to run the complete data warehouse pipeline from Source Data → ETL → Data Warehouse → OLAP Layer → Presentation Dashboard.
 
-### 1. Sync dependencies
+### 1. Sync Dependencies
+Use `uv` to sync all project dependencies, including chart visualization libraries such as `matplotlib` and `seaborn`:
 
 ```bash
 uv sync
 ```
 
-## Run Database Migrations
-
-To create or update the database schema with Alembic:
-
-### 1. Copy the environment file
+### 2. Configure Environment Variables
+Copy `.env.example` to `.env`, then adjust it to match your PostgreSQL database connection:
 
 ```bash
+# Bash
 cp .env.example .env
-```
 
-If you are using Windows PowerShell, you can use:
-
-```powershell
+# PowerShell
 Copy-Item .env.example .env
 ```
 
-### 2. Fill in your database URL
-
-Open `.env` and set your `DATABASE_URL`.
-
-Example:
-
+Open the `.env` file and fill in `DATABASE_URL` with your database connection string:
 ```env
-DATABASE_URL=postgresql+psycopg://username:password@localhost:5432/data_warehouse
+DATABASE_URL=postgresql://username:password@localhost:5432/data_warehouse
 ```
 
-### 3. Run the migration
+### 3. Run Database Migrations
+Use Alembic to create the base database schema (dimension and fact tables) along with the OLAP tables (summary tables and data marts):
 
 ```bash
-alembic -c alembic/alembic.ini upgrade head
+uv run alembic -c alembic/alembic.ini upgrade head
 ```
+
+### 4. Run the ETL Pipeline
+Open and run all cells in the `main.ipynb` notebook to process data from source systems (ERP, CRM, WMS, HR, etc.) and load it into the data warehouse fact and dimension tables.
+
+### 5. Build OLAP Layer (Summary Tables & Data Marts)
+After the data warehouse has been populated by the ETL process, run the OLAP builder module to create aggregate tables (`agg_*`) and wide denormalized data marts (`mart_*`):
+
+```bash
+uv run olap/build_olap.py
+```
+This process will:
+- Drop and recreate the OLAP tables in a controlled manner.
+- Run 8 **Data Quality (DQ) Checks** automatically to ensure data consistency, including validation of total revenue, cost, OTD percentage, and more.
+- Display a summary report of the rows successfully processed.
+
+### 6. Access the Presentation Layer (Analytic Dashboard)
+To analyze the data, create pivot table reports, view KPI scorecards, and explore chart visualizations, open the dashboard Jupyter notebook:
+
+```bash
+uv run jupyter notebook presentation/olap_dashboard.ipynb
+```
+Inside this notebook, you can explore:
+- **Sales Analytics:** Sales pivot tables, monthly revenue trends, regional performance, segmentation, and salesperson rankings.
+- **Production Analytics:** Production yield scorecards by plant, planned vs. actual comparison charts, and cost-per-unit trends.
+- **Inventory Analytics:** Stock level heatmaps (Product × Warehouse), turnover rates, and inbound-outbound inventory flow analysis.
+- **Shipment & Logistics Analytics:** On-time delivery ratio (OTD%), freight cost by shipping method, and SLA compliance.
+- **Integrated KPI Dashboard:** Monthly executive scorecards across subject areas.
+
