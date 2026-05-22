@@ -48,17 +48,17 @@ pip install uv
 
 ## Run the Project
 
-Ikuti langkah-langkah berikut untuk menjalankan seluruh pipeline data warehouse dari Source Data → ETL → Data Warehouse → OLAP Layer → Presentation Dashboard.
+Follow the steps below to run the complete data warehouse pipeline from Source Data → ETL → Data Warehouse → OLAP Layer → Presentation Dashboard.
 
 ### 1. Sync Dependencies
-Gunakan `uv` untuk menyinkronkan seluruh dependensi proyek (termasuk visualisasi chart seperti `matplotlib` dan `seaborn`):
+Use `uv` to sync all project dependencies, including chart visualization libraries such as `matplotlib` and `seaborn`:
 
 ```bash
 uv sync
 ```
 
-### 2. Konfigurasi Environment Variables
-Salin file `.env.example` menjadi `.env` dan sesuaikan koneksi database PostgreSQL Anda:
+### 2. Configure Environment Variables
+Copy `.env.example` to `.env`, then adjust it to match your PostgreSQL database connection:
 
 ```bash
 # Bash
@@ -68,42 +68,42 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-Buka file `.env` dan isi `DATABASE_URL` sesuai database Anda:
+Open the `.env` file and fill in `DATABASE_URL` with your database connection string:
 ```env
 DATABASE_URL=postgresql://username:password@localhost:5432/data_warehouse
 ```
 
-### 3. Jalankan Migrasi Database
-Gunakan Alembic untuk membuat skema dasar database (dimensi & fakta) beserta tabel OLAP (summary & data mart):
+### 3. Run Database Migrations
+Use Alembic to create the base database schema (dimension and fact tables) along with the OLAP tables (summary tables and data marts):
 
 ```bash
 uv run alembic -c alembic/alembic.ini upgrade head
 ```
 
-### 4. Jalankan Pipeline ETL
-Buka dan jalankan seluruh cell di notebook `main.ipynb` untuk memproses data dari source systems (ERP, CRM, WMS, HR, dll.) lalu memuatnya (*load*) ke dalam tabel fakta dan dimensi Data Warehouse.
+### 4. Run the ETL Pipeline
+Open and run all cells in the `main.ipynb` notebook to process data from source systems (ERP, CRM, WMS, HR, etc.) and load it into the data warehouse fact and dimension tables.
 
 ### 5. Build OLAP Layer (Summary Tables & Data Marts)
-Setelah data warehouse terisi oleh ETL, jalankan modul pembangun OLAP untuk membuat tabel agregasi (`agg_*`) dan data mart wide denormalized (`mart_*`):
+After the data warehouse has been populated by the ETL process, run the OLAP builder module to create aggregate tables (`agg_*`) and wide denormalized data marts (`mart_*`):
 
 ```bash
-uv run python -m olap.build_olap
+uv run olap/build_olap.py
 ```
-Proses ini akan:
-- Menghapus dan membuat ulang tabel-tabel OLAP secara teratur.
-- Menjalankan 8 kriteria **Data Quality (DQ) Checks** secara otomatis untuk memastikan konsistensi data (seperti pencocokan nilai total revenue, cost, OTD percentage, dll.).
-- Menampilkan laporan ringkasan jumlah baris yang berhasil diolah.
+This process will:
+- Drop and recreate the OLAP tables in a controlled manner.
+- Run 8 **Data Quality (DQ) Checks** automatically to ensure data consistency, including validation of total revenue, cost, OTD percentage, and more.
+- Display a summary report of the rows successfully processed.
 
-### 6. Akses Presentation Layer (Analytic Dashboard)
-Untuk menganalisis data, membuat laporan pivot table, melihat KPI scorecards, serta visualisasi charts, buka Jupyter notebook dashboard:
+### 6. Access the Presentation Layer (Analytic Dashboard)
+To analyze the data, create pivot table reports, view KPI scorecards, and explore chart visualizations, open the dashboard Jupyter notebook:
 
 ```bash
 uv run jupyter notebook presentation/olap_dashboard.ipynb
 ```
-Di dalam notebook ini, Anda dapat mengeksplorasi:
-- **Sales Analytics:** Pivot table sales, tren pendapatan bulanan, performa per wilayah, segmentasi, serta peringkat salespersons.
-- **Production Analytics:** Scorecard yield produksi per plant, grafik perbandingan rencana vs realisasi, dan tren biaya per unit produksi.
-- **Inventory Analytics:** Heatmap tingkat stok (Product × Warehouse), turnover rate, dan analisis arus masuk-keluar stok.
-- **Shipment & Logistics Analytics:** Rasio pengiriman tepat waktu (OTD%), biaya freight per metode pengiriman, dan kepatuhan SLA.
-- **Integrated KPI Dashboard:** Executive scorecard bulanan lintas subject area.
+Inside this notebook, you can explore:
+- **Sales Analytics:** Sales pivot tables, monthly revenue trends, regional performance, segmentation, and salesperson rankings.
+- **Production Analytics:** Production yield scorecards by plant, planned vs. actual comparison charts, and cost-per-unit trends.
+- **Inventory Analytics:** Stock level heatmaps (Product × Warehouse), turnover rates, and inbound-outbound inventory flow analysis.
+- **Shipment & Logistics Analytics:** On-time delivery ratio (OTD%), freight cost by shipping method, and SLA compliance.
+- **Integrated KPI Dashboard:** Monthly executive scorecards across subject areas.
 
