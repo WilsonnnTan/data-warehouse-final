@@ -24,7 +24,7 @@ from pathlib import Path
 import sqlalchemy as sa
 from dotenv import load_dotenv
 
-from olap.ddl import OLAP_TABLES
+from ddl import OLAP_TABLES
 
 # ---------------------------------------------------------------------------
 # Configuration
